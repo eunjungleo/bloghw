@@ -1,4 +1,4 @@
-# 멋쟁이사자처럼 blogproject deployment 과제
+# 이은정 사자 (덕성 멋사 서식중) blogproject deployment 과제  
 
 
 ### 1. project deployed on HEROKU;
@@ -6,8 +6,15 @@
 
 ---
 
-### 2. Dir Tree
-    
+### 2. installed django packages ###  
+
+1. pillow (imagefield)  
+2. 
+3. 
+
+--- 
+
+### 3. working Directory Tree
 
     "projectmom"
         │ 
@@ -42,14 +49,7 @@
 
 --- 
 
-### 3. installed django packages ###
-
-1. pillow 
-
-
---- 
-
 ### 4. maltese
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Maltese_puppy.jpeg" width="100px" height="100px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Maltese_puppy.jpeg" width="100px" height="100px" style="margin-left: 5px;">
 
