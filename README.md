@@ -1,4 +1,3 @@
-# 이은정 사자 (덕성 멋사 서식중)  
 # blogproject deployment 과제  
 
 
