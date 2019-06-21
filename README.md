@@ -51,5 +51,5 @@
 
 ### 4. maltese
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Maltese_puppy.jpeg" width="100px" height="100px" style="margin-left: 5px;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Maltese_puppy.jpeg" width="100px" height="100px">
 

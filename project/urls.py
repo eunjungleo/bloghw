@@ -15,23 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 
 import blog.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', blog.views.home, name='home'),
-    # post list view
-    path('blog/explore/', blog.views.explore, name='explore'),
-    path('blog/<int:blog_id>/', blog.views.detail, name='detail'),
-    path('blog/new/', blog.views.new, name='new'),
-    # form action; new
-    path('blog/create/', blog.views.create, name='create'),
-    path('blog/photos/', blog.views.photos, name='photos'),
+    path('admin/', admin.site.urls),
 
-
+    path('blog/', include('blog.urls')),
+    path('portfolio/', include('portfolio.urls')),
 ]
 
 if settings.DEBUG:
