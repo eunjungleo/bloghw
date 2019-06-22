@@ -143,4 +143,6 @@ dmypy.json
 
 media/
 
+local_settings.py
+
 
