@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- post content display -->
+<br>
+<br>
+    <div class="container">
+        <h1>{{ blog.title }}</h1>
+<br>
+        <p> {{ blog.pub_date }} </p>
+<br>
+        <p> {{ blog.body }} </p>
+    </div>
+
+<br>
+
+<!-- link to main.html -->
+<a href="{% url 'main' %}">list</a>
+
+
+{% endblock %}

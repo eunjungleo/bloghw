@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- posts list display-->
+<div class="container">
+    <h1 style="font-weight: bold;">글</h1>
+<br>
+<br>
+
+    {% for blog in blogs.all %}
+        <div class="posts">
+            <p class="title"> {{ blog.title }} </p>
+            <p class="thumbnail"> {{ blog.thumbnail }} 
+                <a href="{% url 'detail' blog.id %}">...read</a>
+            </p>
+            <p class="date"> {{ blog.pub_date }} </p>
+            <br>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}

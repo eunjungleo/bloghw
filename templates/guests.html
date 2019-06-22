@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+    <div class="headline">
+        <h1 style="display: inline-block; vertical-align: bottom; font-weight: bold;">방명록</h1>
+        <a href="{% url 'fromguests_createform' %}">
+            <input style="float: right; position: abosolute; margin-top: 1%;" class="btn btn-dark" type="button" value="새글쓰기">
+        </a>
+    </div>
+
+<br>
+<br>
+<!-- posts list display-->
+{% for guest in guests.all %}
+
+    <div class='posts'>
+        <p class="title"> {{ guest.title }} </h5>
+        <p class="thumbnail"> {{ guest.thumbnail }}
+            <a href="{% url 'fromguests_detail' guest.id %}">...read</a>
+        </p>
+        <p class="date"> {{ guest.pub_date }} </p>
+        <br>
+    </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
