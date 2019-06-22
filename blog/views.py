@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.utils import timezone
 from .models import Blog, Guest
 
@@ -21,17 +21,25 @@ def friends(request):
     guests = Guest.objects
     return render(request, 'guests.html', {'guests': guests})
 
-#post create form
+# post create form
 def fromguests(request):
     return render(request, 'fromguests.html')
 
+def fromguests_detail(request, guest_id):
+    guest_detail = get_object_or_404(Guest, pk=guest_id)
+    return render(request, 'guests_detail.html', {'guest': guest_detail})
+
 #form action; views.new 
-def fromguests_create(request):
-    blog = Blog()
-    blog.title = request.GET['title']
-    blog.body = request.GET['body']
-    blog.pub_date = timezone.datetime.now()
-    blog.save()
+def fromguests_createform(request):
+    guest = Guest()
+    guest.title = request.GET['title']
+    guest.body = request.GET['body']
+    guest.pub_date = timezone.datetime.now()
+    guest.save()
     
-    return redirect('/blog/guests/' + str(blog.id))
+    return redirect('/blog/guests/' + str(guest.id))
+
+
+
+
 

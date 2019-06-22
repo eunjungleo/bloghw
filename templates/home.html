@@ -1,7 +1,21 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block content %}
 
-blog home
+<div class="container" style="text-align: center;">
+    <div class="wrapper" style="">
+        <p>
+        <h1 style="font-weight: bold;">소 년 사 자</h1>
+        <br>
+        <br>
+        <div class="img_center">
+            <img src="{% static 'admin/img/cub.png' %}" alt="lion" width="50%">
+        </div>
+        <br>
+        <br>
+            <img src="{% static 'admin/img/wordmark_E_C.png' %}" alt="likelion" width="25%">
+        <br>
+    </div>
+</div>
 
 {% endblock %}
