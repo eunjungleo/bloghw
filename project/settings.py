@@ -138,9 +138,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
-import firebase_admin
-from firebase_admin import credentials
-
-cred = credentials.Certificate(os.path.join(BASE_DIR, 'credentials.json'))
-default_app = firebase_admin.initialize_app(cred)
